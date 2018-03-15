@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+- HTML Document for the Amazing Coin Game
+
+  There are no pre-attached event handlers. They will
+  be added using jQuery in the supporting javascript file.
+-->
+<html>
+   <head>
+     <title>Amazing Coin Game</title>
+     <script src="jquery-1.11.3.js"></script>
+
+      <style>
+         body {
+            background: #dddddd;
+         }
+		 /*element selectors: */
+		 canvas {
+		    margin: 20px;
+			/*important here for padding to be 0 for mouse calculations */
+            padding: 0px;
+		 }
+		 /* class selectors: */
+		 .canvas {
+            background: #ffffff;
+            border: thin inset #aaaaaa;
+         }
+
+         /*id selectors: */
+
+         #canvas1 {
+         }
+
+
+      </style>
+   </head>
+
+  <body>
+    <header>
+    <h1 id='Player1' style="color:blue;" > Player1: 0 </h1>
+    <h1 id='Player2' style="color:red;"> Player2: 0 </h1>
+  </header>
+    <canvas id='canvas1' class='canvas' width='600' height='300'>
+      Canvas not supported
+    </canvas>
+
+    <script src='canvas.js'></script>
+
+    <form>
+      User:<br>
+        <input type="text" name="user" id="player"><br>
+    </form>
+
+
+  </body>
+</html>

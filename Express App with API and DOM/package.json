@@ -1,0 +1,16 @@
+{
+  "name": "express_static_server",
+  "version": "1.0.0",
+  "description": "A server to deliver javascript with API information",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "author": "OscarCastelblanco",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> {{title}} </title>
+</head>
+<body>
+   <h1>{{title}}</h1>
+   <h3>{{body}}</h3>
+   <input type="text" name="ingredient" id="ingredient" />
+   <button id="submit" onclick="getIngredient()" style="margin-bottom: 50px;">Submit</button>
+   <h3>Insert the spices you want to look for separated by comma</h3>
+   <input type="text" name="spices" id="spices" />
+   <button id="submit2" onclick="getSpices()" style="margin-bottom: 50px;">Submit</button>
+</body>
+<script>
+function getIngredient() {
+
+  let ingredientName = document.getElementById('ingredient').value;
+  console.log("The ingredient are ", ingredientName);
+  if(ingredientName === '') {
+    return alert('Please enter an Ingredient')
+  }
+  window.location.href = '/find?ingredients=' + ingredientName;
+}
+
+function getSpices() {
+
+  let spicesName = document.getElementById('spices').value;
+  console.log("The spices are ", spicesName);
+  if(spicesName === '') {
+    return alert('Please enter a spicet')
+  }
+  window.location.href = '/find?spices=' + spicesName;
+}
+</script>
+</html>

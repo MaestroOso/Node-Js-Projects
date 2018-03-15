@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> {{title}} </title>
+</head>
+<body>
+   <h1>{{title}}</h1>
+
+<div>
+   {{#each recipeEntries}}
+      <p><a href= 'recipes/{{this.id}}' target="_blank">{{this.id}} {{this.recipe_name}}</a></p>
+   {{/each}}
+</div>
+
+<h3>{{body}}</h3>
+<input type="text" name="ingredient" id="ingredient" />
+<button id="submit" onclick="getIngredient()" style="margin-bottom: 50px;">Submit</button>
+<h3>Insert the spices you want to look for separated by comma</h3>
+<input type="text" name="spices" id="spices" />
+<button id="submit2" onclick="getSpices()" style="margin-bottom: 50px;">Submit</button>
+
+</body>
+
+<script>
+/*
+Assignment 4 - Oscar Castelblanco
+Based on code provided by prof. Lou Nel
+open the web page with the query for the ingrdient in the box
+*/
+function getIngredient() {
+
+  let ingredientName = document.getElementById('ingredient').value;
+  console.log("The ingredient is ", ingredientName);
+  if(ingredientName === '') {
+    return alert('Please enter an Ingredient')
+  }
+  window.location.href = '/find?ingredients=' + ingredientName;
+}
+/*
+  open the web page with the query for the spice in the box
+*/
+function getSpices() {
+
+  let spicesName = document.getElementById('spices').value;
+  console.log("The spices are ", spicesName);
+  if(spicesName === '') {
+    return alert('Please enter a spicet')
+  }
+  window.location.href = '/find?spices=' + spicesName;
+}
+</script>
+
+</html>
